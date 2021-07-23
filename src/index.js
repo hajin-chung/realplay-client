@@ -46,7 +46,7 @@ function roomConnect(evt) {
 
     publicState = data.publicState;
     qs("#publicState").innerText = JSON.stringify(data.publicState);
-  })
+  }).catch(console.error);
 
 
   socket.on(roomId, data => {
@@ -62,11 +62,13 @@ function roomConnect(evt) {
 
 function roomDisconnect() {
   // catch error
-  postData(`${ENDPOINT}/disconnect`, {roomId: currentRoomId, userId: myUserId});
+  postData(`${ENDPOINT}/disconnect`, {roomId: currentRoomId, userId: myUserId})
+  .catch(console.error);
 }
 
 function logout() {
-  postData(`${ENDPOINT}/logout`, {userId: myUserId});
+  postData(`${ENDPOINT}/logout`, {userId: myUserId})
+  .catch(console.error);
   location.reload();
 }
 
@@ -89,7 +91,7 @@ function loadRoomList() {
 
         qs("#rooms > #list").replaceWith(listElem);
       }
-    })
+    }).catch(console.error)
 }
 
 function init() {
@@ -108,7 +110,7 @@ function init() {
         qs("#user > #userName").innerText = myUserName;
         qs("#user > #userId").innerText = myUserId;
       }
-    });
+    }).catch(console.error);
   })
 
   // room list
