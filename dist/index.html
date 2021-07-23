@@ -1,0 +1,72 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realplay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="login">
+    <h1>Name</h1>
+    <input type="text" id="userName">
+    <button>GO</button>
+  </div>
+
+  <div id="app" style="display: none">
+    <h1>RealPlay</h1>
+    <div id="wrapper">
+    <div id="rooms">
+      <div id="user">
+        <h3 id="userName"></h3>
+        <p id="userId"></p>
+      </div>
+      <div id="controls">
+        <button id="reloadRoomList">
+          r
+        </button>
+        <button id="disconnect">
+         d 
+        </button>
+        <button id="newRoom">
+         m 
+        </button>
+
+      </div>
+      <div id="newRoomInput" style="display: none;">
+        <input type="text" id="newRoomName">
+        <button id="submitNewRoomName">a</button>
+      </div>
+      <div id="list">
+
+      </div>
+    </div>
+    <div id="content" style="display: none;">
+      <div id="roomInfo">
+        <h2 id="roomName"></h2>
+        <p id="roomId"></p>
+      </div>
+      <p id="publicState"></p>
+      <p id="privateState"></p>
+      <div id="updateStates">
+        <div id="updatePrivate">
+          <p>Private</p>
+          <input type="text" id="updatePrivateKey">
+          <input type="text" id="updatePrivateVal">
+          <button>c</button>
+        </div>
+        <div id="updatePublic">
+          <p>Public</p>
+          <input type="text" id="updatePublicKey">
+          <input type="text" id="updatePublicVal">
+          <button>c</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <script src="main.bundle.js"></script>
+</body>
+</html>
