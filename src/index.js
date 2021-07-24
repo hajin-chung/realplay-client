@@ -1,8 +1,8 @@
 import { io } from 'socket.io-client';
 import { postData, qs } from './utils';
 
-const ENDPOINT = "http://39.117.221.46:80";
-const socket = io("http://39.117.221.46:3000");
+const ENDPOINT = "https://39.117.221.46:80";
+const socket = io("https://39.117.221.46:3000");
 let publicState = {};
 let privateState = {};
 let currentRoomId = "";
