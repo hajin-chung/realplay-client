@@ -1,7 +1,7 @@
 import { io } from 'socket.io-client';
 import { postData, qs } from './utils';
 
-const ENDPOINT = "https://127.0.0.1:4000";
+const ENDPOINT = "https://39.117.221.46";
 const socket = io(ENDPOINT);
 let publicState = {};
 let privateState = {};
